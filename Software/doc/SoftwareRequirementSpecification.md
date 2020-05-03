@@ -2,10 +2,13 @@
 
 ## 1. Reference to hardware arhitecture
 
-this ECU has:
-- CAN channel 1.
-- CAN channel 2.
-- Serial communication with PC software.
+This ECU consists of:
+
+- CAN channel 1
+
+- CAN channel 2
+
+- Serial communication with PC software
 
 ## 2. Requirements for software
 
@@ -29,6 +32,10 @@ SWR_ID_2.2.3
 
 The transfer rules shall be configurable via UDS protocol (Write by data ID).
 
+SWR_ID_2.2.4
+
+The transfer process shall be controlled via UDS protocal (Routine Control).
+
 ### 2.3. Simulate CAN frames
 
 SWR_ID_2.3.1
@@ -41,4 +48,8 @@ The ECU shall be able to simulate CAN frame transmission on channel 2, with cust
 
 SWR_ID_2.3.3
 
-The CAN frame contents shall be configurable via UDS protocol.
+The CAN frame contents shall be configurable via UDS protocol (Write by data ID).
+
+SWR_ID_2.3.4
+
+The simulation process shall be controlled via UDS protocal (Routine Control).
