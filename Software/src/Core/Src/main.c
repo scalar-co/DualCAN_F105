@@ -23,7 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "Framework/scheduler.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -88,6 +88,12 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
+
+  /* initialize scheduler and tasks */
+  scheduler_init();
+
+  /* run scheduler and schedule tasks, NEVER return. */
+  scheduler_main();
 
   /* USER CODE END 2 */
  
