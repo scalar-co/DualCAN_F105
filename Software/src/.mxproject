@@ -6,13 +6,13 @@ HeaderFiles#1=W:/scalar_co/github/DualCAN_F105/Software/src/Core/Inc/stm32f1xx_h
 HeaderFiles#2=W:/scalar_co/github/DualCAN_F105/Software/src/Core/Inc/main.h
 HeaderFolderListSize=1
 HeaderPath#0=W:/scalar_co/github/DualCAN_F105/Software/src/Core/Inc
-HeaderFiles=;
 SourceFileListSize=3
 SourceFiles#0=W:/scalar_co/github/DualCAN_F105/Software/src/Core/Src/stm32f1xx_it.c
 SourceFiles#1=W:/scalar_co/github/DualCAN_F105/Software/src/Core/Src/stm32f1xx_hal_msp.c
 SourceFiles#2=W:/scalar_co/github/DualCAN_F105/Software/src/Core/Src/main.c
 SourceFolderListSize=1
 SourcePath#0=W:/scalar_co/github/DualCAN_F105/Software/src/Core/Src
+HeaderFiles=;
 SourceFiles=;
 
 [PreviousLibFiles]
