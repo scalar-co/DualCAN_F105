@@ -13,7 +13,7 @@ Select STM32F105RCT6
 
 ### Hardware Structure Overview
 
-![HardwareOverview](Hardware/HardwareOverview.jpg)
+![HardwareOverview](Hardware/HardwareOverview.png)
 
 ## Software
 
