@@ -12,15 +12,15 @@ typedef struct
 {
 	struct
 	{
-		uint8 tick;
+		uint8 tick;	// increase in ISR
 	}
 	input;
 	struct
 	{
-		uint8 tick;
-		uint8 sync;
-		uint8 cycleCount;
-		uint8 errorCount;
+		uint8 tick;			// a copy in main() from ISR, i.e. increase in main()
+		uint8 sync;			// sync with the copy of tick
+		uint8 cycleCount;	// count of scheduled cycles
+		uint8 errorCount;	// count of schedule errors
 	}
 	local;
 }
@@ -32,6 +32,7 @@ void scheduler_init(void)
 {
 	scheduler.input.tick = 0u;
 	scheduler.local.tick = 0u;
+	scheduler.local.sync = 0u;
 	scheduler.local.cycleCount = 0u;
 	scheduler.local.errorCount = 0u;
 
@@ -51,30 +52,36 @@ void scheduler_main(void)
 	/* calculate delta tick, they are all uint8, no matter overflow */
 	deltaTick = scheduler.local.tick - scheduler.local.sync;
 
-	/* check if the input tick is updated for every 1ms */
-	if( 1u==deltaTick )
+	/* check if the input tick is updated for every 1ms or more */
+	if( deltaTick )
 	{
-		/* keep cycle count */
-		scheduler.local.cycleCount = scheduler.local.sync;
+		/* count up schedule cycles */
+		scheduler.local.cycleCount++;
 
-		/* run 1ms tasks */
+		/* check if schedule errors */
+		if( deltaTick>1 )
+		{
+			/* the 1ms interrupt are missed at least once */
+			scheduler.local.errorCount++;
+
+			/* TODO: correct the cycle count ??? */
+
+			/* TODO: functional safety reactions */
+		}
+		else
+		{
+			/* no errors */
+		}
+
+		/* schedule tasks, now only 1ms */
 		schedulerHook_task1ms();
 	}
 	/* no update */
-	else if( 0u==deltaTick )
+	else
 	{
 		/* continue idle */
 		schedulerHook_idle();
 	}
-	/* updated much more */
-	else
-	{
-		/* the 1ms interrupt are missed at least once */
-		scheduler.local.errorCount++;
-
-		/* TODO: other safety reactions */
-	}
-
 }
 
 /* this function is called from ISR every 1ms */
