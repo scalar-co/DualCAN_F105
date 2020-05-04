@@ -22,3 +22,28 @@ This is not a naming rule, but a guideline:
 
 **ONLY** include the header file when you use the declarations from that header file.
 
+## 3. MACROs := PREFIX_MACRO_NAME
+
+## 4. enum
+
+enum type name: e_prefix_enumTypeName
+
+enum type value: E_PREFIX_ENUM_TYPE_VALUE
+
+## 5. struct
+
+struct type name: t_prefix_structTypeName
+
+struct member variables: memberVariableName
+
+## 6. function
+
+normal: prefix_functionName
+
+hook: prefixHook_functionName
+
+event: prefix_EventFunctionName
+
+
+
+
