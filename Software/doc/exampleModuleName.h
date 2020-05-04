@@ -8,6 +8,9 @@
 /* include header files that is really needed */
 #include "Framework/types.h"  /* uint8, uint32 */
 
+/* MACROs for build options are usually in a seperate header file */
+/* MACROs for data values are usually changed to enum */
+
 /* typedef of enum */
 typedef enum
 {
@@ -51,7 +54,6 @@ extern void emn_setFeatureEnable(boolean enable);
 extern void emn_setActionState(uint8 state);
 extern void emn_setActionData(t_emn_bigStructTypeName * pBigData); /* big data are usually transfered with pointer */
 extern void emn_setActionCondition(t_emn_smallStructTypeName smallData); /* small data are usually transfered with value */
-extern void emn_EventDataReceived(t_emn_bigStructTypeName * pBigData); /* emphasize this is an event */
 
 /* signal/data interfaces, output, provided APIs */
 /* other modules call these APIs to fetch data signals out from this module */
@@ -62,7 +64,8 @@ extern t_emn_smallStructTypeName emn_getActionCondition(void); /* small data are
 
 /* signal/data interfaces, output, required APIs */
 /* this module calls these APIs to deliver data signals out to other modules */
-exern void emnHook_dataReceived(t_emn_bigStructTypeName * pBigData);
+/* hook can be used if this module is defined earlier, and the interfaces need be defined */
+exern void emnHook_setReceiveData(t_emn_bigStructTypeName * pBigData);
 
 /* Control interfaces, input, provided APIs */
 /* other modules call these APIs to deliver control states into this module */
@@ -71,13 +74,18 @@ extern void emn_disableSomeFeature(void);
 extern void emn_startSomeAction(void);
 extern void emn_stopSomeAction(void);
 
-/* Event interfaces, output, required APIs */
+/* Control Event interfaces, output, required APIs */
 /* this module calls these APIs to deliver control states out to other modules */
-extern void emnHook_enableStateChanged(uint8 newState);
+/* hook can be used if there are more than one event receivers. */
+extern void emnHook_featureEnabled(void);
+extern void emnHook_featureDisabled(void);
 extern void emnHook_actionStarted(void);
 extern void emnHook_actionStopped(void);
 
 /* Mixed data/event interfaces, input/output, provided APIs */
+/* control event input + data input */
+extern void emn_EventDataReceived(t_emn_bigStructTypeName * pBigData);
+/* data input + control input + data output */
 extern e_emn_enumTypeName emn_startOneAction(t_emn_bigStructTypeName * pActionData);
 
 /* Service inerfaces, input/output, provided APIs */
