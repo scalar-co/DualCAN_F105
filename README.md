@@ -1,9 +1,10 @@
 # DualCAN_F105
+
 Dual CAN on STM32F105
 
-## Hardware
+## 1. Hardware
 
-### Development Board
+### 1.1. Development Board
 
 Where to get the development board? Goto taobao:
 
@@ -11,13 +12,13 @@ https://item.taobao.com/item.htm?id=589316513548
 
 Select STM32F105RCT6
 
-### Hardware Structure Overview
+### 1.2. Hardware Overview
 
 ![HardwareOverview](Hardware/HardwareOverview.png)
 
-## Software
+## 2. Software
 
-### Tools
+### 2.1. Tools
 
 **STM32CubeIDE (V1.2.0)**
 
@@ -31,29 +32,28 @@ Flash S19 files into the board via serial communication.
 
 https://www.st.com/en/development-tools/flasher-stm32.html
 
-### Software Requirements
+### 2.2. Software Requirements
 
 [SoftwareRequirementSpecification.md](Software/doc/SoftwareRequirementSpecification.md)
 
-### Software Architecture
+### 2.3. Software Architecture
 
 [CodingNamingRules.md](Software/doc/CodingNamingRules.md)
 
 TODO
 
-### Software Design
+### 2.4. Software Design
 
 TODO
 
-### Software Unit Test
+### 2.5. Software Unit Test
 
 TODO
 
-### Software Integration Test
+### 2.6. Software Integration Test
 
-Won't Do
+TODO
 
-### Software Verification/Validation Test
+### 2.7. Software Verification/Validation Test
 
-Won't Do
-
+TODO
