@@ -38,9 +38,9 @@ https://www.st.com/en/development-tools/flasher-stm32.html
 
 ### 2.3. Software Architecture
 
-[CodingNamingRules.md](Software/doc/CodingNamingRules.md)
+[Coding Naming Rules](Software/doc/CodingNamingRules.md)
 
-TODO
+[Software Architecture](Software/doc/SoftwareArchitecture.md)
 
 ### 2.4. Software Design
 
