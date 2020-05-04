@@ -44,6 +44,8 @@ hook: prefixHook_functionName
 
 event: prefix_EventFunctionName
 
+# examples
 
+[exampleModuleName.h](exampleModuleName.h)
 
 
