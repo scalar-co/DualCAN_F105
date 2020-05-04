@@ -19,7 +19,17 @@ Select STM32F105RCT6
 
 ### Tools
 
-IDE: STM32CubeIDE 1.2.0
+**STM32CubeIDE (V1.2.0)**
+
+Software IDE for software development.
+
+https://www.st.com/en/development-tools/stm32cubeide.html
+
+**FlashLoader Demonstrator (V2.8.0)**
+
+Flash S19 files into the board via serial communication.
+
+https://www.st.com/en/development-tools/flasher-stm32.html
 
 ### Software Requirements
 
