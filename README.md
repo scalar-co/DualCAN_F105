@@ -23,9 +23,11 @@ IDE: STM32CubeIDE 1.2.0
 
 ### Software Requirements
 
-[/Software/doc/SoftwareRequirementSpecification.md](/Software/doc/SoftwareRequirementSpecification.md)
+[SoftwareRequirementSpecification.md](Software/doc/SoftwareRequirementSpecification.md)
 
 ### Software Architecture
+
+[CodingNamingRules.md](Software/doc/CodingNamingRules.md)
 
 TODO
 
