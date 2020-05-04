@@ -12,7 +12,7 @@ This ECU consists of:
 
 ## 2. Requirements for software
 
-### 2.1. UDS on Serial communication
+### 2.1. UDS and NVM
 
 SWR_ID_2.1.1
 
@@ -51,6 +51,7 @@ The transfer process shall be controlled via UDS protocal (Routine Control).
 SWR_ID_2.2.4.2
 
 The transfer process state (activated or deactivated) shall be stored in NVM.
+
 i.e. User can configure whether the transfer process starts or not after every time POR.
 
 ### 2.3. Simulate CAN frames
@@ -78,4 +79,6 @@ The simulation process shall be controlled via UDS protocal (Routine Control).
 SWR_ID_2.3.4.2
 
 The simulation process state (activated or deactivated) shall be stored in NVM.
+
 i.e. User can configure whether the simulation process starts or not after every time POR.
+
