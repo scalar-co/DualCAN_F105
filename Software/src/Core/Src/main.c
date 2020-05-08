@@ -92,9 +92,6 @@ int main(void)
   /* initialize scheduler and tasks */
   scheduler_init();
 
-  /* run scheduler and schedule tasks, NEVER return. */
-  scheduler_main();
-
   /* USER CODE END 2 */
  
  
@@ -104,6 +101,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+
+	  /* run scheduler and schedule tasks, NEVER return. */
+	  scheduler_main();
 
     /* USER CODE BEGIN 3 */
   }
