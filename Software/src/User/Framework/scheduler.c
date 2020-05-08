@@ -55,6 +55,9 @@ void scheduler_main(void)
 	/* check if the input tick is updated for every 1ms or more */
 	if( deltaTick )
 	{
+		/* sync */
+		scheduler.local.sync = scheduler.local.tick;
+
 		/* count up schedule cycles */
 		scheduler.local.cycleCount++;
 

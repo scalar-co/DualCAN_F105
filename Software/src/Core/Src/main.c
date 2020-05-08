@@ -102,10 +102,10 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-	  /* run scheduler and schedule tasks, NEVER return. */
-	  scheduler_main();
-
     /* USER CODE BEGIN 3 */
+
+	  /* run scheduler tasks */
+	  scheduler_main();
   }
   /* USER CODE END 3 */
 }
